@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 import { MoreHorizontal } from "lucide-react"
-import { Film } from "./columns";
+import { FilmColumn } from "@/types/film.type"
 
 interface ActionsProps {
-  row: Film
+  row: FilmColumn
 }
 
 export const Actions = ({ row }: ActionsProps) => {

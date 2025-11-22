@@ -2,26 +2,12 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-import { ArrowUpDown } from "lucide-react"
 import { Checkbox } from "@/components/ui/checkbox"
 import { DataTableColumnHeader } from "../../../../components/table/data-table-column-header"
 import { Actions } from "./actions"
+import { FilmColumn } from "@/types/film.type"
 
-export type Film = {
-  filmId: string
-  title: string
-  originalTitle: string
-  slug: string
-  view: number
-  duration: number
-  publicStatusCode: string
-  createdAt: string
-  updatedAt: string
-  country: string
-  language: string
-}
-
-export const columns: ColumnDef<Film>[] = [
+export const columns: ColumnDef<FilmColumn>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -50,11 +36,11 @@ export const columns: ColumnDef<Film>[] = [
   },
   {
     accessorKey: "title",
-    header: "Title",
+    header: "Tên phim",
   },
   {
     accessorKey: "originalTitle",
-    header: "Original-Title",
+    header: "Tên gốc",
   },
   {
     accessorKey: "slug",
@@ -66,27 +52,27 @@ export const columns: ColumnDef<Film>[] = [
   },
   {
     accessorKey: "publicStatusCode",
-    header: "Status",
+    header: "Trang thái",
   },
   {
     accessorKey: "duration",
-    header: "Duration",
+    header: "Thời gian",
   },
   {
     accessorKey: "country",
-    header: "Country",
+    header: "Quốc gia",
   },
   {
     accessorKey: "language",
-    header: "Language",
+    header: "Ngôn ngữ",
   },
   {
     accessorKey: "createdAt",
-    header: "Created-At",
+    header: "Ngày tạo",
   },
   {
     accessorKey: "updatedAt",
-    header: "Updated-At",
+    header: "Ngày cập nhật",
   },
   {
     id: "actions",

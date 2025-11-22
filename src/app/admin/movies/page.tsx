@@ -2,10 +2,11 @@
 
 import AdminHeader from "@/components/admin/layout/AdminHeader";
 import { DataTable } from "./_components/data-table";
-import { columns, Film } from "./_components/columns";
+import { columns } from "./_components/columns";
+import { FilmColumn } from "@/types/film.type";
 
 const MoviesPage = () => {
-  const data: Film[] = [
+  const data: FilmColumn[] = [
     {
       filmId: "1",
       title: "Movie 1",
